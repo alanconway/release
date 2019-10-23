@@ -45,14 +45,6 @@ images:
       - destination_dir: .
         source_path: /go/bin/kafka-channel-webhook
   to: knative-eventing-sources-kafka-channel-webhook
-- dockerfile_path: openshift/ci-operator/knative-images/heartbeats/Dockerfile
-  from: base
-  inputs:
-    bin:
-      paths:
-      - destination_dir: .
-        source_path: /go/bin/heartbeats
-  to: knative-eventing-sources-heartbeats
 - dockerfile_path: openshift/ci-operator/knative-images/kafka-channel-dispatcher/Dockerfile
   from: base
   inputs:
@@ -85,22 +77,6 @@ images:
       - destination_dir: .
         source_path: /go/bin/camel-source-controller
   to: knative-eventing-sources-camel-source-controller
-- dockerfile_path: openshift/ci-operator/knative-images/websocketsource/Dockerfile
-  from: base
-  inputs:
-    bin:
-      paths:
-      - destination_dir: .
-        source_path: /go/bin/websocketsource
-  to: knative-eventing-sources-websocketsource
-- dockerfile_path: openshift/ci-operator/knative-images/event_display/Dockerfile
-  from: base
-  inputs:
-    bin:
-      paths:
-      - destination_dir: .
-        source_path: /go/bin/event_display
-  to: knative-eventing-sources-event-display
 - dockerfile_path: openshift/ci-operator/knative-images/kafka-source-controller/Dockerfile
   from: base
   inputs:
@@ -109,14 +85,6 @@ images:
       - destination_dir: .
         source_path: /go/bin/kafka-source-controller
   to: knative-eventing-sources-kafka-source-controller
-- dockerfile_path: openshift/ci-operator/knative-images/heartbeats_receiver/Dockerfile
-  from: base
-  inputs:
-    bin:
-      paths:
-      - destination_dir: .
-        source_path: /go/bin/heartbeats_receiver
-  to: knative-eventing-sources-heartbeats-receiver
 - dockerfile_path: openshift/ci-operator/knative-images/github-source-controller/Dockerfile
   from: base
   inputs:
